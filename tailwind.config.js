@@ -8,12 +8,14 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["var(--font-bellefair)"]
+				// sans: ["var(--font-bellefair)"],
+				barlowCondensed: ["var(--font-barlow-condensed)"],
+				barlow: ["var(--font-barlow)"]
 			},
 			backgroundImage: {
-				'home-desktop': "url('/assets/home/background-home-desktop.jpg')",
+				"home-desktop": "url('/assets/home/background-home-desktop.jpg')"
 				// 'footer-texture': "url('/img/footer-texture.png')",
-			  }
+			}
 		}
 	},
 	plugins: []

@@ -3,10 +3,10 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "concurrently \"next dev\" \"tailwindcss --input ./app/globals.css --output ./app/output.css --watch\"",
-		"build": "tailwindcss ./app/globals.css --output ./app/output.css && next build",
-		"start": "next start --turbo",
-		"lint": "next lint --turbo"
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
 	},
 	"dependencies": {
 		"@next/font": "^13.0.6",
