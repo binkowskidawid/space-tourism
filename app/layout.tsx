@@ -34,7 +34,7 @@ export default function RootLayout({
 		>
 			<head />
 			<body>
-				<div className="min-h-screen w-screen bg-home-desktop bg-cover bg-no-repeat text-white">
+				<div className="min-h-screen w-screen bg-home-mobile lg:bg-home-desktop bg-cover bg-no-repeat text-white">
 					<div className="min-h-screen px-10 py-8 flex flex-col justify-between">
 						<Navbar />
 						{children}

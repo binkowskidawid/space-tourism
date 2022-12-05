@@ -13,7 +13,8 @@ module.exports = {
 				barlow: ["var(--font-barlow)"]
 			},
 			backgroundImage: {
-				"home-desktop": "url('/assets/home/background-home-desktop.jpg')"
+				"home-desktop": "url('/assets/home/background-home-desktop.jpg')",
+				"home-mobile": "url('/assets/home/background-home-tablet.jpg')"
 				// 'footer-texture': "url('/img/footer-texture.png')",
 			}
 		}
