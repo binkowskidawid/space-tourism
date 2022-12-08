@@ -10,6 +10,7 @@ module.exports = {
 			fontFamily: {
 				// sans: ["var(--font-bellefair)"],
 				barlowCondensed: ["var(--font-barlow-condensed)"],
+				barlowCondensedBold: ["var(--font-barlow-condensed-bold)"],
 				barlow: ["var(--font-barlow)"]
 			},
 			backgroundImage: {

@@ -22,6 +22,12 @@ const barlow_condensed = Barlow_Condensed({
 	subsets: ["latin"]
 });
 
+const barlow_condensed_bold = Barlow_Condensed({
+	variable: "--font-barlow-condensed-bold",
+	weight: "700",
+	subsets: ["latin"]
+});
+
 export default function RootLayout({
 	children
 }: {
@@ -30,7 +36,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${bellefair.className} ${barlow.variable} ${barlow_condensed.variable}`}
+			className={`${bellefair.className} ${barlow.variable} ${barlow_condensed.variable} ${barlow_condensed_bold.variable}`}
 		>
 			<head />
 			<body>
