@@ -29,8 +29,6 @@ export default function Navbar() {
 		}
 	];
 
-	const windowWidth = window.innerWidth;
-
 	const [openMenu, setOpenMenu] = useState(false);
 	const handleClickOnMobileMenuIcon = () => setOpenMenu(!openMenu);
 	const closeMobileMenu = () => setOpenMenu(false);
@@ -44,8 +42,8 @@ export default function Navbar() {
 							className=""
 							src="/assets/shared/logo.svg"
 							alt="Logo"
-							width={windowWidth < 768 ? 35 : 50}
-							height={windowWidth < 768 ? 35 : 50}
+							width={35}
+							height={35}
 						/>
 					</div>
 				</Link>
