@@ -13,7 +13,7 @@ export default function Navbar() {
 			text: "HOME"
 		},
 		{
-			href: "/destination",
+			href: "/destination/moon",
 			number: "01",
 			text: "DESTINATION"
 		},
@@ -39,7 +39,7 @@ export default function Navbar() {
 				<Link href="/" passHref className="nav__logo flex">
 					<div className="flex items-center cursor-pointer">
 						<Image
-							className=""
+							className="md:w-[50px]"
 							src="/assets/shared/logo.svg"
 							alt="Logo"
 							width={35}

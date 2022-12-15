@@ -15,8 +15,11 @@ module.exports = {
 			},
 			backgroundImage: {
 				"home-desktop": "url('/assets/home/background-home-desktop.jpg')",
-				"home-mobile": "url('/assets/home/background-home-tablet.jpg')"
-				// 'footer-texture': "url('/img/footer-texture.png')",
+				"home-mobile": "url('/assets/home/background-home-tablet.jpg')",
+				"destination-desktop":
+					"url('/assets/destination/background-destination-desktop.jpg')",
+				"destination-mobile":
+					"url('/assets/destination/background-destination-tablet.jpg')"
 			}
 		}
 	},
