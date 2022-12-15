@@ -11,8 +11,6 @@ interface Destination {
 	distance: string;
 	travel: string;
 }
-{
-}
 
 type PageProps = {
 	params: {
@@ -92,8 +90,8 @@ export default async function DestinationName({ params: { name } }: PageProps) {
 				</div>
 				<Image
 					className="md:w-[450px] md:ml-48 my-10 md:my-0"
-					src={destination.images.webp.slice(1)}
-					alt={destination.name}
+					src={destination!.images.webp.slice(1)}
+					alt={destination!.name}
 					width={170}
 					height={170}
 				/>
@@ -103,7 +101,9 @@ export default async function DestinationName({ params: { name } }: PageProps) {
 					<ul className="flex justify-center items-center md:justify-start md:items-start text-base">
 						{destinations.map((el) => (
 							<li
-								className={`flex items-center h-full mx-3 md:mx-0 md:mr-8 hover:text-white hover:border-b-2 ${name === el.name.toLowerCase() ? 'border-b-2' : ''} transition duration-300`}
+								className={`flex items-center h-full mx-3 md:mx-0 md:mr-8 hover:text-white hover:border-b-2 ${
+									name === el.name.toLowerCase() ? "border-b-2" : ""
+								} transition duration-300`}
 								key={el.name}
 							>
 								<Link
@@ -118,10 +118,10 @@ export default async function DestinationName({ params: { name } }: PageProps) {
 				</div>
 				<div className="xl:w-3/4 mx-4 md:mx-0 flex flex-col items-center lg:items-start justify-center">
 					<h1 className="text-[55px] md:text-[120px] lg:text-[140px]">
-						{destination.name.toUpperCase()}
+						{destination!.name.toUpperCase()}
 					</h1>
 					<p className="font-barlow tracking-wide leading-loose text-center lg:text-left text-sm md:text-base lg:text-lg">
-						{destination.description}
+						{destination!.description}
 					</p>
 					<div className="w-full h-[2px] bg-slate-600 my-10"></div>
 					<div className="flex flex-col md:flex-row items-center justify-center md:justify-start">
@@ -129,13 +129,17 @@ export default async function DestinationName({ params: { name } }: PageProps) {
 							<p className="h-8 md:h-10 md:mb-2 text-white md:text-2xl md:text-[1.25rem] font-barlowCondensed tracking-widest">
 								AVG. DISTANCE
 							</p>
-							<p className="text-3xl md:text-4xl">{destination.distance.toUpperCase()}</p>
+							<p className="text-3xl md:text-4xl">
+								{destination!.distance.toUpperCase()}
+							</p>
 						</div>
 						<div className="text-center md:text-left">
 							<p className="h-8 md:h-10 md:mb-2 text-white md:text-2xl md:text-[1.25rem] font-barlowCondensed tracking-widest">
 								EST. TRAVEL TIME
 							</p>
-							<p className="text-3xl md:text-4xl">{destination.travel.toUpperCase()}</p>
+							<p className="text-3xl md:text-4xl">
+								{destination!.travel.toUpperCase()}
+							</p>
 						</div>
 					</div>
 				</div>
