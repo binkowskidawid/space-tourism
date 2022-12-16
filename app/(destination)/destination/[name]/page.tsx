@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { cache } from "react";
 
 export const dynamicParams = true;
 interface Destination {
@@ -66,16 +67,21 @@ const destinations: Destination[] = [
 	}
 ];
 
-const getName = async (name: string) => {
+const getName = cache(async (name: string) => {
 	const destination = await destinations.find(
 		(destination) => destination.name.toLowerCase() === name
 	);
 	if (typeof destination === "object") {
 		return destination;
 	}
+});
+
+const preload = (name: string) => {
+	void getName(name);
 };
 
 export default async function DestinationName({ params: { name } }: PageProps) {
+	preload(name);
 	const destination = await getName(name);
 
 	return (
