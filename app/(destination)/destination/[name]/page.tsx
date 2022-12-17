@@ -86,7 +86,7 @@ export default async function DestinationName({ params: { name } }: PageProps) {
 
 	return (
 		<main className="container mx-auto min-h-[75vh] mt-16 flex lg:flex-row flex-col justify-between items-center">
-			<div className="lg:h-[70vh] flex-1 flex flex-col items-center justify-between lg:pr-20">
+			<div className="md:min-h-[60vh] lg:min-h-[90vh] md:w-full flex-1 flex flex-col items-center justify-between md:justify-around lg:pr-10">
 				<div className="flex items-center justify-center font-barlowCondensed md:mt-10">
 					<p className="tracking-[.15em] text-[18px] md:text-[24px] lg:text-[28px] text-gray-500 font-barlowCondensedBold mr-8">
 						01
@@ -96,15 +96,15 @@ export default async function DestinationName({ params: { name } }: PageProps) {
 					</h2>
 				</div>
 				<Image
-					className="md:w-[450px] md:ml-48 my-10 md:my-0"
+					className="md:w-[350px] lg:w-[400px] xl:w-[480px] 2xl:w-[600px] lg:ml-28 my-10 lg:my-0"
 					src={destination!.images.webp.slice(1)}
 					alt={destination!.name}
 					width={170}
 					height={170}
 				/>
 			</div>
-			<div className="lg:h-[70vh] md:w-1/2 flex-1 flex flex-col justify-center items-center md:justify-end md:items-start lg:pl-16">
-				<div className="h-8 mb-4 md:mb-2 text-white text-2xl md:text-[1.25rem] text-center  font-barlowCondensed tracking-widest">
+			<div className="lg:w-1/2 flex-1 flex flex-col justify-center items-center lg:justify-end lg:items-start lg:pl-10">
+				<div className="h-8 mb-4 md:mb-2 text-white text-2xl md:text-4xl 2xl:text-[4rem] text-center  font-barlowCondensed tracking-widest 2xl:tracking-wide">
 					<ul className="flex justify-center items-center md:justify-start md:items-start text-base">
 						{destinations.map((el) => (
 							<li
@@ -123,17 +123,17 @@ export default async function DestinationName({ params: { name } }: PageProps) {
 						))}
 					</ul>
 				</div>
-				<div className="xl:w-3/4 mx-4 md:mx-0 flex flex-col items-center lg:items-start justify-center">
-					<h1 className="text-[55px] md:text-[120px] lg:text-[140px]">
+				<div className="md:w-3/4 lg:w-full xl:w-3/4 mx-4 md:mx-0 flex flex-col items-center lg:items-start justify-center md:justify-around">
+					<h1 className="text-[55px] md:text-[110px] xl:text-[120px] 2xl:text-[150px]">
 						{destination!.name.toUpperCase()}
 					</h1>
-					<p className="font-barlow tracking-wide leading-loose text-center lg:text-left text-sm md:text-base lg:text-lg">
+					<p className="font-barlow tracking-wide leading-loose text-center lg:text-left text-sm md:text-base xl:text-lg">
 						{destination!.description}
 					</p>
 					<div className="w-full h-[2px] bg-slate-600 my-10"></div>
-					<div className="flex flex-col md:flex-row items-center justify-center md:justify-start">
-						<div className="md:mr-20 mb-8 md:mb-0 text-center md:text-left">
-							<p className="h-8 md:h-10 md:mb-2 text-white md:text-2xl md:text-[1.25rem] font-barlowCondensed tracking-widest">
+					<div className="md:w-full flex flex-col md:flex-row items-center justify-center md:justify-around lg:justify-start">
+						<div className="md:mr-8 mb-8 md:mb-0 text-center md:text-left">
+							<p className="h-8 md:h-10 md:mb-2 text-white md:text-2xl font-barlowCondensed tracking-widest">
 								AVG. DISTANCE
 							</p>
 							<p className="text-3xl md:text-4xl">
@@ -141,7 +141,7 @@ export default async function DestinationName({ params: { name } }: PageProps) {
 							</p>
 						</div>
 						<div className="text-center md:text-left">
-							<p className="h-8 md:h-10 md:mb-2 text-white md:text-2xl md:text-[1.25rem] font-barlowCondensed tracking-widest">
+							<p className="h-8 md:h-10 md:mb-2 text-white md:text-2xl font-barlowCondensed tracking-widest">
 								EST. TRAVEL TIME
 							</p>
 							<p className="text-3xl md:text-4xl">
