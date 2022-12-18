@@ -35,7 +35,7 @@ export default async function DestinationName({ params: { name } }: PageProps) {
 	return (
 		<main className="container mx-auto min-h-[75vh] mt-16 flex lg:flex-row flex-col justify-between items-center">
 			<div className="md:min-h-[60vh] lg:min-h-[90vh] md:w-full flex-1 flex flex-col items-center justify-between md:justify-around lg:pr-10">
-				<div className="w-full flex items-center justify-center md:justify-start font-barlowCondensed md:mt-10 md:ml-10">
+				<div className="flex items-center justify-center font-barlowCondensed md:mt-10">
 					<p className="tracking-[.15em] text-[18px] md:text-[24px] lg:text-[28px] text-gray-500 font-barlowCondensedBold mr-8">
 						01
 					</p>
@@ -49,7 +49,6 @@ export default async function DestinationName({ params: { name } }: PageProps) {
 					alt={destination!.name}
 					width={170}
 					height={170}
-					quality={100}
 				/>
 			</div>
 			<div className="lg:w-1/2 flex-1 flex flex-col justify-center items-center lg:justify-end lg:items-start lg:pl-10">

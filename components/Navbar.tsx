@@ -18,12 +18,12 @@ export default function Navbar() {
 			text: "DESTINATION"
 		},
 		{
-			href: "/crew",
+			href: "/crew/douglashurley",
 			number: "02",
 			text: "CREW"
 		},
 		{
-			href: "/technology",
+			href: "/technology/launchvehicle",
 			number: "03",
 			text: "TECHNOLOGY"
 		}
