@@ -8,7 +8,7 @@ export default function DestinationLayout({
 }) {
 	return (
 		<div className="min-h-screen bg-technology-mobile lg:bg-technology-desktop bg-cover bg-no-repeat text-white">
-			<div className="min-h-screen px-4 lg:px-10 py-2 lg:py-8 flex flex-col justify-between">
+			<div className="min-h-screen px-4 lg:px-10 py-2 lg:py-8 flex flex-col justify-between overflow-hidden">
 				<Navbar />
 				{children}
 				<Footer />

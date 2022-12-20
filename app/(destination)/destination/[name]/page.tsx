@@ -1,8 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { cache } from "react";
 import { destinations } from "../../../../data/data";
 import { notFound } from "next/navigation";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import {
+	getNameOfDestination,
+	next,
+	previous
+} from "../../../../functions/functions";
 
 export const dynamicParams = true;
 
@@ -12,25 +17,18 @@ type PageProps = {
 	};
 };
 
-const getName = cache(async (name: string) => {
-	const destination = await destinations.find(
-		(destination) => destination.name.toLowerCase() === name
-	);
-	if (typeof destination === "object") {
-		return destination;
-	} else return undefined;
-});
-
 const preload = (name: string) => {
-	void getName(name);
+	void getNameOfDestination(name);
 };
 
 export default async function DestinationName({ params: { name } }: PageProps) {
 	preload(name);
-	const destination = await getName(name);
+	const destination = await getNameOfDestination(name);
 	if (!destination) {
 		notFound();
 	}
+	const prev = previous(name, destinations);
+	const forward = next(name, destinations);
 
 	return (
 		<main className="container mx-auto min-h-[75vh] mt-16 flex lg:flex-row flex-col justify-between items-center">
@@ -43,14 +41,32 @@ export default async function DestinationName({ params: { name } }: PageProps) {
 						PICK YOUR DESTINATION
 					</h2>
 				</div>
-				<Image
-					className="md:w-[350px] lg:w-[400px] xl:w-[480px] 2xl:w-[520px] lg:ml-28 my-10 lg:my-0 animate-spin-slow md:animate-spin-slower"
-					src={destination!.images.webp.slice(1)}
-					alt={destination!.name}
-					width={170}
-					height={170}
-					quality={100}
-				/>
+				<div className="w-[80vw] lg:w-full flex items-center justify-between lg:justify-center">
+					<button className="lg:hidden">
+						<Link
+							href={`/destination/${prev}`}
+							className="transition duration-300"
+						>
+							<ChevronLeftIcon className="h-8 md:h-10 w-8 md:w-10 text-white hover:text-gray-500" />
+						</Link>
+					</button>
+					<Image
+						className="md:w-[350px] lg:w-[400px] xl:w-[480px] 2xl:w-[520px] lg:ml-28 my-10 lg:my-0 animate-spin-slow md:animate-spin-slower"
+						src={destination!.images.webp.slice(1)}
+						alt={destination!.name}
+						width={170}
+						height={170}
+						quality={100}
+					/>
+					<button className="lg:hidden">
+						<Link
+							href={`/destination/${forward}`}
+							className="transition duration-300"
+						>
+							<ChevronRightIcon className="h-8 md:h-10 w-8 md:w-10 text-white hover:text-gray-500" />
+						</Link>
+					</button>
+				</div>
 			</div>
 			<div className="lg:w-1/2 flex-1 flex flex-col justify-center items-center lg:justify-end lg:items-start lg:pl-10">
 				<div className="h-8 mb-4 md:mb-2 text-white text-2xl md:text-4xl 2xl:text-[4rem] text-center  font-barlowCondensed tracking-widest 2xl:tracking-wide">

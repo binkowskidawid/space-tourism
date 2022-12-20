@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Space tourism website solution
+
+This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
+- [Getting Started](#getting-started)
+
+## Overview
+
+This project was built in [Next 13](https://beta.nextjs.org/docs/getting-started) (with app directory (beta)), [TailwindCSS](https://tailwindcss.com/) and [TypeScript](https://www.typescriptlang.org/). In this project I used new features which Next.js 13 deliver:
+
+- [next/image](https://beta.nextjs.org/docs/api-reference/components/image),
+- [next/link](https://beta.nextjs.org/docs/api-reference/components/link),
+- [@next/font (beta)](https://beta.nextjs.org/docs/api-reference/components/font),
+- [layout.js](https://beta.nextjs.org/docs/api-reference/file-conventions/layout),
+- [page.js](https://beta.nextjs.org/docs/api-reference/file-conventions/page),
+- [loading.js](https://beta.nextjs.org/docs/api-reference/file-conventions/loading),
+- [head.js](https://beta.nextjs.org/docs/api-reference/file-conventions/head),
+- [not-found.js](https://beta.nextjs.org/docs/api-reference/file-conventions/not-found),
+- etc.
+
+### Screenshot
+
+![Screenshot](public/sreenshot.png)
+
+### Links
+
+- Solution URL: [on Github](https://github.com/binkowskidawid/space-tourism)
+- Live Site URL: [on Vercel](https://space-tourism-binkowskidawid.vercel.app/)
+
+## My process
+
+### Built with
+
+- [TypeScript](https://www.typescriptlang.org/),
+- [Next.js 13](https://beta.nextjs.org/docs/getting-started),
+- [TailwindCSS](https://tailwindcss.com/),
+- Flexbox,
+- Mobile-first workflow.
+
+## Author
+
+- Website - [Dawid Bińkowski](https://www.davecoding.xyz)
+- Frontend Mentor - [@binkowskidawid](https://www.frontendmentor.io/profile/binkowskidawid)
+- Twitter - [@David02838996](https://twitter.com/David02838996)
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
+npm install
 npm run dev
 # or
+yarn install
 yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

@@ -34,9 +34,9 @@ export default function Navbar() {
 	const closeMobileMenu = () => setOpenMenu(false);
 
 	return (
-		<nav className="nav h-12 md:h-20 flex justify-between items-center fixed left-0 w-full md:pl-10 px-4 md:px-0 py-2 z-20">
+		<nav className="h-12 md:h-20 flex justify-between items-center fixed left-0 w-full md:pl-10 px-4 md:px-0 py-2 z-20">
 			<div className="flex justify-center items-center">
-				<Link href="/" passHref className="nav__logo flex">
+				<Link href="/" passHref className="flex">
 					<div className="flex items-center cursor-pointer">
 						<Image
 							className="md:w-[50px]"
@@ -44,6 +44,7 @@ export default function Navbar() {
 							alt="Logo"
 							width={35}
 							height={35}
+							priority
 						/>
 					</div>
 				</Link>
@@ -51,8 +52,8 @@ export default function Navbar() {
 			<div
 				className={
 					openMenu
-						? "nav__menu show__menu bg-white/0 backdrop-blur-2xl w-3/4 fixed md:static top-0 right-0 h-screen text-white text-2xl md:text-[1.25rem] p-6 md:p-2 text-center  ease-out duration-500 md:duration-[0ms] md:transition-none font-barlowCondensed tracking-widest"
-						: "nav__menu bg-white/0 backdrop-blur-2xl md:w-[65%] fixed md:static md:top-0 -right-full md:right-0 h-full text-white text-2xl md:text-[1.25rem] p-16 md:p-2 text-center  ease-out duration-500 md:duration-[0ms] md:transition-none font-barlowCondensed tracking-widest"
+						? "show__menu bg-white/0 backdrop-blur-2xl w-3/4 fixed md:static top-0 right-0 h-screen text-white text-2xl md:text-[1.25rem] p-6 md:p-2 text-center  ease-out duration-500 md:duration-[0ms] md:transition-none font-barlowCondensed tracking-widest"
+						: "bg-white/0 backdrop-blur-2xl md:w-[65%] fixed md:static md:top-0 -right-full md:right-0 h-full text-white text-2xl md:text-[1.25rem] p-16 md:p-2 text-center  ease-out duration-500 md:duration-[0ms] md:transition-none font-barlowCondensed tracking-widest"
 				}
 				id="nav-menu"
 			>
